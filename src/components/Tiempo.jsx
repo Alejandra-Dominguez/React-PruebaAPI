@@ -18,7 +18,7 @@ export function Tiempo(){
         const miTiempo = async () => {
             setCargando(true);
             try {
-                const responder = await fetch (`http://api.weatherapi.com/v1/current.json?key=833ef9b76f004ca384f232620252210&q=${buscar}&aqi=no`);
+                const responder = await fetch (`https://api.weatherapi.com/v1/current.json?key=833ef9b76f004ca384f232620252210&q=${buscar}&aqi=no`);
                 const datosJson = await responder.json();
                 setDatosTiempo(datosJson);
             } catch (error) {
