@@ -1,0 +1,20 @@
+.tarjeta-usuario {
+    border: 1px solid #9df5a4;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.tarjeta-usuario:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+    transition: all 0.5s ease;
+}
+
+.tarjeta-usuario h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    color: #333;
+}
