@@ -9,6 +9,7 @@ import { Routes } from 'react-router'
 import { Link } from 'react-router' 
 import { Productos } from './pages/Productos'
 import { Inicio } from './pages/Inicio'
+import Divisa from './pages/Divisa'
 
 
 
@@ -29,6 +30,7 @@ function App() {
         <Link className="nav-link" to={"/"}>Inicio</Link>
         <Link className="nav-link" to={"/clientes"}>Clientes</Link>
         <Link className="nav-link" to={"/productos"}>Productos</Link>
+        <Link className="nav-link" to={"/divisa"}>Divisa</Link>
         <Link className="nav-link" to={"/acercade"}>Acerca de</Link>
         <Link className="nav-link" to={"/tiempo"}>Tiempo</Link>
       </div>
@@ -46,7 +48,8 @@ function App() {
        <Routes>
         <Route path = '/' element = {<Inicio />}/>
         <Route path = '/clientes' element = {<Usuarios /> }/>
-        <Route path = '/produstos' element = {<Productos /> }/>
+        <Route path = '/productos' element = {<Productos /> }/>
+        <Route path = '/divisa' element = {<Divisa /> }/>
        </Routes>
       </>
     )
