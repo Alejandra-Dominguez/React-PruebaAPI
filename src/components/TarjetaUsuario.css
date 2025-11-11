@@ -1,20 +1,27 @@
 .tarjeta-usuario {
-    border: 1px solid #9df5a4;
-    border-radius: 8px;
-    padding: 1rem;
-    margin: 1rem 0;
-    background: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: relative;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  background: #fff;
+  overflow: hidden;
 }
 
-.tarjeta-usuario:hover {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transform: translateY(-2px);
-    transition: all 0.5s ease;
+.tarjeta-usuario::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #a07cfe, #fe8fb5, #ffbe7b);
+  background-size: 300% 300%;
+  animation: shineBorder 4s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }
 
-.tarjeta-usuario h2 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.5rem;
-    color: #333;
+@keyframes shineBorder {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
